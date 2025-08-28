@@ -1,26 +1,65 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+@plugin "daisyui";
+
+/* Thunder — Vercel-dark vibes with charcoal focal panels */
+@plugin "daisyui/theme" {
+	name: 'thunder-dark';
+	default: true;
+	prefersdark: true;
+	color-scheme: dark;
+
+	/* near-black surfaces */
+	--color-base-100: #0b0d10; /* page */
+	--color-base-200: #111318; /* cards/sections */
+	--color-base-300: #171a20; /* deeper panels */
+	--color-base-content: #e6e7ea;
+
+	/* brand punch */
+	--color-primary: #ffd60a; /* bold yellow pop */
+	--color-primary-content: #0b0d10; /* readable on yellow */
+
+	/* supporting neutrals */
+	--color-secondary: #22242b;
+	--color-secondary-content: #e6e7ea;
+	--color-accent: #2b2e36;
+	--color-accent-content: #f5f6f8;
+
+	/* semantic */
+	--color-neutral: #1a1d23;
+	--color-neutral-content: #e6e7ea;
+	--color-info: #3abff8;
+	--color-success: #36d399;
+	--color-warning: #fbbd23;
+	--color-error: #f87272;
+
+	/* feel */
+	--radius-box: 0.75rem;
+	--radius-field: 0.5rem;
+	--border: 1px;
+	--depth: 1;
+	--noise: 0;
+}
+
+/* optional: subtle “grid” backdrop on the main page wrapper */
+.bg-grid {
+	background-image: radial-gradient(
+		transparent 1px,
+		rgba(255, 255, 255, 0.025) 1px
+	);
+	background-size: 16px 16px;
+}
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+	--font-heading: var(--font-oswald);
+	--font-body: var(--font-inter);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+h1,
+h2,
+h3 {
+	font-family: var(--font-heading), sans-serif;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+	font-family: var(--font-body), sans-serif;
 }
