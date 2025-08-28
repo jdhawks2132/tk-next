@@ -7,9 +7,8 @@ const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
 
 export const metadata: Metadata = {
-	title: 'Thunder Kitties — Summer Ball',
-	description:
-		'Schedules, maps, and contacts for the Thunder Kitties Summer Ball season.',
+	title: 'Thunder Kitties',
+	description: 'Schedules, maps, and contacts for the Dallas Thunder Kitties.',
 };
 
 export const viewport: Viewport = {
