@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { EventCard } from '@/components/EventCard';
 import { ScheduleCard } from '@/components/ScheduleCard';
 import { ScheduleTable } from '@/components/ScheduleTable';
+import { Carousel } from '@/components/Carousel';
+import { carouselItems } from '@/data/carousel';
 import { events } from '@/data/events';
 import { schedules } from '@/data/schedules';
 
@@ -125,6 +127,13 @@ export default function Page() {
 							/>
 						</figure>
 					</div>
+				</div>
+			</section>
+
+			<section className='py-16'>
+				<div className='mx-auto max-w-6xl px-4'>
+					<h2 className='text-3xl font-bold mb-6'>Gallery</h2>
+					<Carousel items={carouselItems} />
 				</div>
 			</section>
 
