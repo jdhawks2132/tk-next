@@ -20,8 +20,6 @@ export default function SchedulePage() {
 					← Home
 				</Link>
 			</div>
-
-			{/* Mobile: cards */}
 			<div className='grid gap-4 md:hidden'>
 				{schedules.map((s) => (
 					<ScheduleCard
@@ -30,8 +28,6 @@ export default function SchedulePage() {
 					/>
 				))}
 			</div>
-
-			{/* Desktop: table */}
 			<div className='hidden md:block'>
 				<ScheduleTable items={schedules} />
 			</div>

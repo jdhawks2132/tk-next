@@ -22,13 +22,6 @@ export function EventCard({
 					</div>
 					<div className='flex flex-wrap items-center gap-2'>
 						<span className='badge badge-outline'>{event.location}</span>
-						<a
-							href={event.googleMapsLink}
-							target='_blank'
-							rel='noopener noreferrer'
-							className='link link-primary no-underline'>
-							📍 Map
-						</a>
 					</div>
 				</div>
 
@@ -50,7 +43,7 @@ export function EventCard({
 						href={event.googleMapsLink}
 						target='_blank'
 						rel='noopener noreferrer'
-						className='btn btn-ghost btn-sm'>
+						className='btn btn-secondary btn-sm'>
 						Open in Maps
 					</a>
 				</div>

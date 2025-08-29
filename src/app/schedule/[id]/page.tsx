@@ -10,7 +10,6 @@ export function generateStaticParams() {
 	return schedules.map((s) => ({ id: String(s.id) }));
 }
 
-// NOTE: params is async in Next 15
 export async function generateMetadata({
 	params,
 }: {
@@ -28,7 +27,6 @@ export async function generateMetadata({
 	};
 }
 
-// NOTE: params is async here too
 export default async function ScheduleDetailPage({
 	params,
 }: {
@@ -120,16 +118,6 @@ export default async function ScheduleDetailPage({
 								<span className='font-semibold'>Jersey:</span> {s.jersey}
 							</p>
 						) : null}
-						<p>
-							<span className='font-semibold'>Map:</span>{' '}
-							<a
-								href={mapHref}
-								target='_blank'
-								rel='noopener noreferrer'
-								className='link link-primary'>
-								View on Google Maps
-							</a>
-						</p>
 					</div>
 
 					{s.isGame && (
@@ -145,11 +133,11 @@ export default async function ScheduleDetailPage({
 							target='_blank'
 							rel='noopener noreferrer'
 							className='btn btn-primary'>
-							Directions
+							Google Maps
 						</a>
 						<Link
 							href='/schedule'
-							className='btn btn-ghost'>
+							className='btn btn-secondary'>
 							Back to Schedule
 						</Link>
 					</div>

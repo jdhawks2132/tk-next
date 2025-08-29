@@ -21,7 +21,7 @@ export function ScheduleTable({ items }: { items: ScheduleItem[] }) {
 							<td>
 								<Link
 									href={`/schedule/${s.id}`}
-									className='link link-primary'>
+									className='link link-primary no-underline hover:underline font-bold'>
 									{s.description}
 								</Link>
 							</td>

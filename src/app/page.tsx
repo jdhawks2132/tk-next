@@ -1,4 +1,3 @@
-// src/app/page.tsx
 import Image from 'next/image';
 import Link from 'next/link';
 import { EventCard } from '@/components/EventCard';
@@ -7,55 +6,12 @@ import { ScheduleTable } from '@/components/ScheduleTable';
 import { events } from '@/data/events';
 import { schedules } from '@/data/schedules';
 
-type ScheduleItem = {
-	id: string;
-	description: string;
-	date: string;
-	time: string;
-	location: string;
-	field: string;
-	jersey?: string;
-	imageUrl: string;
-	googleMapsLink: string;
-	isGame: boolean;
-};
-
-const schedule: ScheduleItem[] = [
-	{
-		id: 'wed-1',
-		description: 'Practice',
-		date: 'Wed, Jul 9',
-		time: '6:30 PM',
-		location: 'Mike Lewis Park',
-		field: '3',
-		jersey: 'Black',
-		imageUrl: '/images/mike_lewis.jpg',
-		googleMapsLink: 'https://g.co/kgs/KhbNkt3',
-		isGame: false,
-	},
-	{
-		id: 'sat-1',
-		description: 'Game vs. Mustangs',
-		date: 'Sat, Jul 12',
-		time: '2:15 PM',
-		location: 'Mike Lewis Park',
-		field: '2',
-		jersey: 'Yellow',
-		imageUrl: '/images/tk_hero.jpg',
-		googleMapsLink: 'https://g.co/kgs/KhbNkt3',
-		isGame: true,
-	},
-];
-
 export default function Page() {
 	return (
 		<div className='bg-base-100'>
-			{/* HERO (ultra dark base, thin border for definition) */}
 			<section className='hero min-h-[78vh] border-b border-base-300 bg-grid'>
 				<div className='hero-content grid w-full max-w-6xl grid-cols-1 gap-10 px-4 py-12 lg:grid-cols-2'>
-					{/* Text */}
 					<div className='space-y-6'>
-						{/* brand pill (optional) */}
 						<div className='inline-flex items-center gap-2 rounded-full border border-base-300 bg-base-200/50 px-3 py-1 text-xs'>
 							<span>⚡</span>
 							Thunder Kitties
@@ -84,7 +40,6 @@ export default function Page() {
 						</div>
 					</div>
 
-					{/* Image (edge-to-edge, no bg strip) */}
 					<div className='overflow-hidden rounded-xl border border-base-300 shadow-xl'>
 						<figure className='relative aspect-[4/3] w-full'>
 							<Image
@@ -99,25 +54,22 @@ export default function Page() {
 				</div>
 			</section>
 
-			{/* ABOUT (charcoal focal area) */}
 			<section
 				id='about'
 				className='py-16'>
 				<div className='mx-auto max-w-6xl px-4 grid grid-cols-1 gap-8 lg:grid-cols-2'>
-					{/* Text block (charcoal focal card) */}
 					<div className='card bg-base-200 border border-base-300 shadow-xl order-1 lg:order-none'>
 						<div className='card-body gap-5'>
 							<h2 className='text-3xl font-bold'>About Us</h2>
 
 							<p className='opacity-90'>
 								The Thunder Kitties compete in the E Division of the Pegasus
-								Slow Pitch Softball League—an inclusive Dallas league. We’re
-								proud 2019 NAGAAA World Series silver medalists, returned in
-								2021 &amp; 2023, and took silver at the 2025 Easter Classic.
-								We’re pumped to represent Dallas at GSWS Houston 2025.
+								Slow Pitch Softball League—an inclusive Dallas league.2019
+								NAGAAA World Series silver medalists, returned in 2021 &amp;
+								2023, and took silver at the 2025 Easter Classic. We're pumped
+								to represent Dallas at GSWS Houston 2025.
 							</p>
 
-							{/* Highlights list */}
 							<ul className='space-y-2'>
 								{[
 									'Welcoming new players of all experience levels',
@@ -133,8 +85,7 @@ export default function Page() {
 								))}
 							</ul>
 
-							{/* Quick stats bar */}
-							<div className='stats bg-base-100 border border-base-300'>
+							<div className='stats bg-base-100 border border-base-300 hidden md:grid'>
 								<div className='stat'>
 									<div className='stat-title opacity-70'>League</div>
 									<div className='stat-value text-xl'>PSSA</div>
@@ -164,7 +115,6 @@ export default function Page() {
 						</div>
 					</div>
 
-					{/* Image block */}
 					<div className='flex items-center justify-center'>
 						<figure className='relative aspect-[4/3] w-full'>
 							<Image
@@ -178,7 +128,6 @@ export default function Page() {
 				</div>
 			</section>
 
-			{/* SCHEDULE (charcoal table with badges) */}
 			<section
 				id='schedule'
 				className='py-16'>
@@ -192,7 +141,6 @@ export default function Page() {
 						</Link>
 					</div>
 
-					{/* Mobile cards (image-free by default for consistency) */}
 					<div className='grid gap-4 md:hidden'>
 						{schedules.map((s) => (
 							<ScheduleCard
@@ -202,14 +150,12 @@ export default function Page() {
 						))}
 					</div>
 
-					{/* Desktop table */}
 					<div className='hidden md:block'>
 						<ScheduleTable items={schedules} />
 					</div>
 				</div>
 			</section>
 
-			{/* EVENTS (charcoal cards) */}
 			<section
 				id='events'
 				className='py-16'>
@@ -233,7 +179,7 @@ export default function Page() {
 					</div>
 				</div>
 			</section>
-			{/* CONTACT (accent ring + avatar) */}
+
 			<section
 				id='contact'
 				className='py-16'>
@@ -242,7 +188,6 @@ export default function Page() {
 
 					<div className='card bg-base-200 border border-base-300 shadow-xl'>
 						<div className='card-body flex flex-col items-center gap-8 md:flex-row md:items-center md:justify-center'>
-							{/* Avatar */}
 							<div className='avatar'>
 								<div className='w-32 rounded-full ring ring-primary ring-offset-2 ring-offset-base-200'>
 									<Image
@@ -255,7 +200,6 @@ export default function Page() {
 								</div>
 							</div>
 
-							{/* Text + CTAs */}
 							<div className='flex-1 space-y-6 text-center md:text-left'>
 								<h3 className='text-2xl font-semibold'>Coach: John Blizzard</h3>
 
