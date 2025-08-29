@@ -37,7 +37,7 @@ export function ScheduleTable({ items }: { items: ScheduleItem[] }) {
 							</td>
 							<td>
 								<div
-									className={`badge ${
+									className={`badge min-w-[5rem] font-bold ${
 										s.isGame ? 'badge-error' : 'badge-success'
 									}`}>
 									{s.isGame ? 'Game' : 'Practice'}

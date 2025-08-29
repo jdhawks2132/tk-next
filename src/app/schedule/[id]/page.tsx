@@ -82,7 +82,9 @@ export default async function ScheduleDetailPage({
 				<div className='md:w-1/2 p-6 lg:p-8 flex flex-col gap-4'>
 					<div className='flex flex-wrap items-center gap-2'>
 						<span
-							className={`badge ${s.isGame ? 'badge-error' : 'badge-success'}`}>
+							className={`badge min-w-[5rem] font-bold ${
+								s.isGame ? 'badge-error' : 'badge-success'
+							}`}>
 							{s.isGame ? 'Game' : 'Practice'}
 						</span>
 						<span className='badge badge-ghost'>
@@ -121,9 +123,9 @@ export default async function ScheduleDetailPage({
 					</div>
 
 					{s.isGame && (
-						<div className='alert bg-base-100 border border-base-300 mt-2'>
+						<div className='alert bg-base-100 border border-primary mt-2'>
 							<span className='font-medium'>Game day:</span>
-							<span> please arrive 30 minutes early.</span>
+							<span> Please arrive 30 minutes early.</span>
 						</div>
 					)}
 

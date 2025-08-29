@@ -19,7 +19,7 @@ export function ScheduleCard({ s }: { s: ScheduleItem }) {
 				<div className='flex items-center justify-between'>
 					<h3 className='card-title text-lg'>{s.description}</h3>
 					<span
-						className={`badge ${
+						className={`badge min-w-[5rem] font-bold ${
 							s.isGame ? 'badge-error' : 'badge-success'
 						} badge-outline`}>
 						{s.isGame ? 'Game' : 'Practice'}
