@@ -4,13 +4,13 @@ export const schedules: ScheduleItem[] = [
 	{
 		id: 7,
 		description: 'Practice',
-		field: 'TBD',
-		location: 'McInnish Sports Complex',
+		field: 'Field 1',
+		location: 'Churchill Park',
 		jersey: 'N/A',
-		googleMapsLink: 'https://goo.gl/maps/EeTL6Zy5ErWWM2nF9',
-		imageUrl: '/images/mckinnish.jpg',
+		googleMapsLink: 'https://maps.app.goo.gl/wmGzYQWh2eFZnAvX6',
+		imageUrl: '/images/churchill_park.jpeg',
 		date: '9/7/2025',
-		time: 'TBD',
+		time: '10AM - 12PM',
 		isGame: false,
 	},
 	{
