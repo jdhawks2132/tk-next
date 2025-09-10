@@ -10,7 +10,7 @@ export const schedules: ScheduleItem[] = [
 		googleMapsLink: 'https://maps.app.goo.gl/wmGzYQWh2eFZnAvX6',
 		imageUrl: '/images/churchill_park.jpeg',
 		date: '9/14/2025',
-		time: 'TBD',
+		time: '10:00 AM - 12:00 PM',
 		isGame: false,
 	},
 	{
