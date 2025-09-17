@@ -2,18 +2,6 @@ import type { ScheduleItem } from '@/types/schedule';
 
 export const schedules: ScheduleItem[] = [
 	{
-		id: 8,
-		description: 'Practice',
-		field: 'Field 1',
-		location: 'Churchill Park',
-		jersey: 'N/A',
-		googleMapsLink: 'https://maps.app.goo.gl/wmGzYQWh2eFZnAvX6',
-		imageUrl: '/images/churchill_park.jpeg',
-		date: '9/14/2025',
-		time: '10:00 AM - 12:00 PM',
-		isGame: false,
-	},
-	{
 		id: 9,
 		description: 'Pool Play Begins',
 		field: 'TBD',
