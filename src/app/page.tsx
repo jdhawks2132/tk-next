@@ -45,7 +45,7 @@ export default function Page() {
 					<div className='overflow-hidden rounded-xl border border-base-300 shadow-xl'>
 						<figure className='relative aspect-[4/3] w-full'>
 							<Image
-								src='/images/tk_hero.jpg'
+								src='/images/tk_houston_2025.jpg'
 								alt='Thunder Kitties Softball Team'
 								fill
 								className='object-cover'
