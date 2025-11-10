@@ -2,12 +2,12 @@ import type { EventItem } from '@/types/event';
 
 export const events: EventItem[] = [
 	{
-		id: 5,
-		title: 'GSWS: Closing Ceremonies',
-		info: ['Awards Presentation', 'Closing Party', 'Celebrate!'],
-		location: 'Bayou Music Center',
-		googleMapsLink: 'https://maps.app.goo.gl/ETESLNCHfzrpLg219',
-		date: '9/27/2025',
-		time: '6:00 - 10:00 PM',
+		id: 1,
+		title: 'Recruiting: Open Practice!',
+		info: ['New Players Welcome', 'No Experience Necessary', 'Have Fun!'],
+		location: 'Churchill Park, Field 1',
+		googleMapsLink: 'https://maps.app.goo.gl/YVdCm4aL7QfuUPAC7',
+		date: '11/15/2025',
+		time: '9:00 AM - 11:00 AM',
 	},
 ];
