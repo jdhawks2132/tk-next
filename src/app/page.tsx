@@ -68,8 +68,16 @@ export default function Page() {
 								The Thunder Kitties compete in the E Division of the Pegasus
 								Slow Pitch Softball League—an inclusive Dallas league.2019
 								NAGAAA World Series silver medalists, returned in 2021 &amp;
-								2023, and took silver at the 2025 Easter Classic. We're pumped
-								to represent Dallas at GSWS Houston 2025.
+								2023, and placed 9th in 2025. We are excited to participate in
+								the{' '}
+								<a
+									href='https://www.suncoastsoftball.org/gsc'
+									target='_blank'
+									rel='noopener noreferrer'
+									className='underline text-primary hover:opacity-80'>
+									Gasparilla Softball Tournament
+								</a>{' '}
+								in Tampa, FL in February 2026.
 							</p>
 
 							<ul className='space-y-2'>

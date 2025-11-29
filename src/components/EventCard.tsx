@@ -7,6 +7,9 @@ export function EventCard({
 	event: EventItem;
 	className?: string;
 }) {
+	const hasMapLink = Boolean(event.googleMapsLink);
+	const hasInfoLink = Boolean(event.infoLink);
+
 	return (
 		<article
 			className={`card h-full bg-base-200 border border-base-300 shadow-sm hover:shadow-md transition ${className}`}>
@@ -38,14 +41,34 @@ export function EventCard({
 					</ul>
 				)}
 
-				<div className='card-actions justify-end mt-auto'>
-					<a
-						href={event.googleMapsLink}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='btn btn-secondary btn-sm'>
-						Open in Maps
-					</a>
+				<div className='card-actions justify-end mt-auto gap-2'>
+					{hasMapLink && (
+						<a
+							href={event.googleMapsLink}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='btn btn-secondary btn-sm'>
+							View Location
+						</a>
+					)}
+
+					{hasInfoLink && (
+						<a
+							href={event.infoLink!}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='btn btn-secondary btn-sm'>
+							More Info
+						</a>
+					)}
+
+					{!hasMapLink && !hasInfoLink && (
+						<button
+							className='btn btn-ghost btn-sm'
+							disabled>
+							Learn More
+						</button>
+					)}
 				</div>
 			</div>
 		</article>
