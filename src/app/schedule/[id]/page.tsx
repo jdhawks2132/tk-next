@@ -37,11 +37,8 @@ export default async function ScheduleDetailPage({
 	const s = schedules.find((x) => String(x.id) === id);
 	if (!s) notFound();
 
-	const mapHref =
-		s.googleMapsLink ||
-		`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-			`${s.location}${s.field ? ` Field ${s.field}` : ''}`
-		)}`;
+	const hasMapLink = Boolean(s.googleMapsLink);
+	const mapHref = hasMapLink ? s.googleMapsLink : null;
 
 	return (
 		<div className='mx-auto max-w-6xl px-4 py-12'>
@@ -63,11 +60,22 @@ export default async function ScheduleDetailPage({
 
 			<div className='bg-base-200 border border-base-300 rounded-xl shadow-xl overflow-hidden md:flex'>
 				<div className='md:w-1/2'>
-					<a
-						href={mapHref}
-						target='_blank'
-						rel='noopener noreferrer'
-						aria-label='Open in Google Maps'>
+					{hasMapLink ? (
+						<a
+							href={mapHref!}
+							target='_blank'
+							rel='noopener noreferrer'
+							aria-label='Open in Google Maps'>
+							<div className='relative aspect-[4/3] w-full'>
+								<Image
+									src={s.imageUrl || '/images/tk_hero.jpg'}
+									alt={s.description}
+									fill
+									className='object-cover'
+								/>
+							</div>
+						</a>
+					) : (
 						<div className='relative aspect-[4/3] w-full'>
 							<Image
 								src={s.imageUrl || '/images/tk_hero.jpg'}
@@ -76,7 +84,7 @@ export default async function ScheduleDetailPage({
 								className='object-cover'
 							/>
 						</div>
-					</a>
+					)}
 				</div>
 
 				<div className='md:w-1/2 p-6 lg:p-8 flex flex-col gap-4'>
@@ -130,13 +138,15 @@ export default async function ScheduleDetailPage({
 					)}
 
 					<div className='mt-4 flex flex-wrap gap-2'>
-						<a
-							href={mapHref}
-							target='_blank'
-							rel='noopener noreferrer'
-							className='btn btn-primary'>
-							Google Maps
-						</a>
+						{hasMapLink && (
+							<a
+								href={mapHref!}
+								target='_blank'
+								rel='noopener noreferrer'
+								className='btn btn-primary'>
+								Google Maps
+							</a>
+						)}
 						<Link
 							href='/schedule'
 							className='btn btn-secondary'>

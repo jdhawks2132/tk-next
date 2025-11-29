@@ -4,7 +4,7 @@ export type ScheduleItem = {
 	field: string;
 	location: string;
 	jersey: string;
-	googleMapsLink: string;
+	googleMapsLink?: string;
 	date: string;
 	time: string;
 	isGame: boolean;

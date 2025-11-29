@@ -13,4 +13,15 @@ export const schedules: ScheduleItem[] = [
 		time: 'TBD',
 		isGame: false,
 	},
+	{
+		id: 'gsc-2026',
+		description: 'Gasparilla Softball Tournament',
+		field: 'TBD',
+		location: 'Tampa, FL',
+		jersey: 'TBD',
+		imageUrl: '/images/gsws2025.jpg',
+		date: '2/13/2026 - 2/16/2026',
+		time: 'All Day (schedule TBA)',
+		isGame: true,
+	},
 ];

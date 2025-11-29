@@ -3,7 +3,7 @@ export type EventItem = {
 	title: string;
 	info: string[];
 	location: string;
-	googleMapsLink: string;
+	googleMapsLink?: string;
 	infoLink?: string | null;
 	date: string;
 	time?: string;

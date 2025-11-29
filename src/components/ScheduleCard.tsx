@@ -3,6 +3,8 @@ import Link from 'next/link';
 import Image from 'next/image';
 
 export function ScheduleCard({ s }: { s: ScheduleItem }) {
+	const hasMapLink = Boolean(s.googleMapsLink);
+
 	return (
 		<article className='card bg-base-200 border border-base-300 shadow'>
 			{/* If you want to drop images for schedule, delete the figure block */}
@@ -41,13 +43,15 @@ export function ScheduleCard({ s }: { s: ScheduleItem }) {
 						className='btn btn-ghost btn-sm'>
 						Details
 					</Link>
-					<a
-						href={s.googleMapsLink}
-						target='_blank'
-						rel='noopener noreferrer'
-						className='btn btn-link text-primary no-underline'>
-						📍 View Map
-					</a>
+					{hasMapLink && (
+						<a
+							href={s.googleMapsLink}
+							target='_blank'
+							rel='noopener noreferrer'
+							className='btn btn-link text-primary no-underline'>
+							📍 View Map
+						</a>
+					)}
 				</div>
 			</div>
 		</article>
