@@ -4,13 +4,13 @@ export const schedules: ScheduleItem[] = [
 	{
 		id: 1,
 		description: 'Open Practice',
-		field: 'TBD',
-		location: 'TBD',
+		field: '5',
+		location: 'McKinnish Park',
 		jersey: 'NA',
-		googleMapsLink: 'https://maps.app.goo.gl/YVdCm4aL7QfuUPAC7',
-		imageUrl: '/images/churchill_park.jpeg',
+		googleMapsLink: 'https://maps.app.goo.gl/GZLfL5VE69kbSXdq9',
+		imageUrl: '/images/mckinnish.jpg',
 		date: '12/7/2025',
-		time: 'TBD',
+		time: '1 PM - 3 PM',
 		isGame: false,
 	},
 	{
