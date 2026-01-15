@@ -4,13 +4,13 @@ export const schedules: ScheduleItem[] = [
 	{
 		id: 1,
 		description: 'Open Practice',
-		field: '3',
+		field: '1',
 		location: 'McKinnish Park',
 		jersey: 'NA',
 		googleMapsLink: 'https://maps.app.goo.gl/GZLfL5VE69kbSXdq9',
 		imageUrl: '/images/mckinnish.jpg',
-		date: '1/11/2026',
-		time: '11:30 AM - 1:30 PM',
+		date: '1/25/2026',
+		time: '9:00 AM - 11:00 AM',
 		isGame: false,
 	},
 	{

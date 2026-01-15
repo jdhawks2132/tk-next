@@ -5,10 +5,10 @@ export const events: EventItem[] = [
 		id: 1,
 		title: 'Recruiting: Open Practice!',
 		info: ['New Players Welcome', 'No Experience Necessary', 'Have Fun!'],
-		location: 'McKinnish Park (Field 3)',
+		location: 'McKinnish Park (Field 1)',
 		googleMapsLink: 'https://maps.app.goo.gl/GZLfL5VE69kbSXdq9',
-		date: '1/11/2026',
-		time: '11:30 AM - 1:30 PM',
+		date: '1/25/2026',
+		time: '9:00 AM - 11:00 AM',
 	},
 	{
 		id: 2,
