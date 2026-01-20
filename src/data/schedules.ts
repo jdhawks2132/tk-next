@@ -9,7 +9,7 @@ export const schedules: ScheduleItem[] = [
 		jersey: 'NA',
 		googleMapsLink: 'https://maps.app.goo.gl/GZLfL5VE69kbSXdq9',
 		imageUrl: '/images/mckinnish.jpg',
-		date: '1/25/2026',
+		date: '2/1/2026',
 		time: '9:00 AM - 11:00 AM',
 		isGame: false,
 	},

@@ -7,7 +7,7 @@ export const events: EventItem[] = [
 		info: ['New Players Welcome', 'No Experience Necessary', 'Have Fun!'],
 		location: 'McKinnish Park (Field 1)',
 		googleMapsLink: 'https://maps.app.goo.gl/GZLfL5VE69kbSXdq9',
-		date: '1/25/2026',
+		date: '2/1/2026',
 		time: '9:00 AM - 11:00 AM',
 	},
 	{
