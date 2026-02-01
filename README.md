@@ -22,3 +22,5 @@ A modern website for the **Dallas Thunder Kitties** softball team, built with:
 ```bash
 pnpm install
 ```
+
+added g4 tag
