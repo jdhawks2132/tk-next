@@ -2,6 +2,7 @@
 import type { Metadata, Viewport } from 'next';
 import { Inter, Oswald } from 'next/font/google';
 import Script from 'next/script';
+import { Suspense } from 'react';
 import './globals.css';
 import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 
@@ -46,7 +47,9 @@ function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
 gtag('config', '${gaId}', { send_page_view: false });`}
 						</Script>
-						<GoogleAnalytics gaId={gaId} />
+						<Suspense fallback={null}>
+							<GoogleAnalytics gaId={gaId} />
+						</Suspense>
 					</>
 				) : null}
 
