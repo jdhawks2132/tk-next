@@ -1,10 +1,13 @@
 // src/app/layout.tsx
 import type { Metadata, Viewport } from 'next';
 import { Inter, Oswald } from 'next/font/google';
+import Script from 'next/script';
 import './globals.css';
+import { GoogleAnalytics } from '@/components/analytics/GoogleAnalytics';
 
 const inter = Inter({ subsets: ['latin'], variable: '--font-inter' });
 const oswald = Oswald({ subsets: ['latin'], variable: '--font-oswald' });
+const gaId = process.env.NEXT_PUBLIC_GA_ID;
 
 export const metadata: Metadata = {
 	title: 'Thunder Kitties',
@@ -31,6 +34,22 @@ export default function RootLayout({
 			suppressHydrationWarning>
 			<body
 				className={`${inter.variable} min-h-screen bg-base-100 text-base-content antialiased flex flex-col`}>
+				{gaId ? (
+					<>
+						<Script
+							src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
+							strategy='afterInteractive'
+						/>
+						<Script id='google-analytics' strategy='afterInteractive'>
+							{`window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', '${gaId}', { send_page_view: false });`}
+						</Script>
+						<GoogleAnalytics gaId={gaId} />
+					</>
+				) : null}
+
 				{/* DaisyUI Navbar */}
 				<nav className='navbar border-b border-base-200 bg-base-100'>
 					<div className='navbar-start'>
