@@ -43,7 +43,7 @@ export default function Page() {
 					</div>
 
 					<div className='overflow-hidden rounded-xl border border-base-300 shadow-xl'>
-						<figure className='relative aspect-[4/3] w-full'>
+						<figure className='relative aspect-4/3 w-full'>
 							<Image
 								src='/images/tk_hero.jpg'
 								alt='Thunder Kitties Softball Team'
@@ -60,7 +60,7 @@ export default function Page() {
 				id='about'
 				className='py-16'>
 				<div className='mx-auto max-w-6xl px-4 grid grid-cols-1 gap-8 lg:grid-cols-2'>
-					<div className='card bg-base-200 border border-base-300 shadow-xl order-1 lg:order-none'>
+					<div className='card bg-base-200 border border-base-300 shadow-xl order-1 lg:order-0'>
 						<div className='card-body gap-5'>
 							<h2 className='text-3xl font-bold'>About Us</h2>
 
@@ -126,7 +126,7 @@ export default function Page() {
 					</div>
 
 					<div className='flex items-center justify-center'>
-						<figure className='relative aspect-[4/3] w-full'>
+						<figure className='relative aspect-4/3 w-full'>
 							<Image
 								src='/images/opening_day_2026.jpg'
 								alt='Thunder Kitties — Opening Day 2026'
