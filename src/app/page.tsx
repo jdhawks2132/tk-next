@@ -128,8 +128,8 @@ export default function Page() {
 					<div className='flex items-center justify-center'>
 						<figure className='relative aspect-[4/3] w-full'>
 							<Image
-								src='/images/gsws2025.jpg'
-								alt='Thunder Kitties — gsws 2025'
+								src='/images/opening_day_2026.jpg'
+								alt='Thunder Kitties — Opening Day 2026'
 								fill
 								className='object-cover rounded-xl'
 							/>

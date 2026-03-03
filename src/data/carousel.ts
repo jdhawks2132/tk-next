@@ -2,6 +2,11 @@ import type { CarouselItem } from '@/types/carousel';
 
 export const carouselItems: CarouselItem[] = [
 	{
+		id: 0,
+		src: '/images/gsws2025.jpg',
+		alt: 'GSWS 2025',
+	},
+	{
 		id: 1,
 		src: '/images/kitties_medals_2025.jpg',
 		alt: 'Kitties with medals',
