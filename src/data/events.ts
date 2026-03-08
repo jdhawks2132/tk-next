@@ -18,7 +18,7 @@ export const events: EventItem[] = [
 		location: 'Round Up Saloon',
 		googleMapsLink: 'https://maps.app.goo.gl/uiUZV7JxVUY8ZnEd7',
 		infoLink: 'https://www.dallaspssa.org/datesofplay2026',
-		date: '2/15/2026',
+		date: '4/19/2026',
 		time: '5:00 PM - 9:00 PM',
 	},
 ];
