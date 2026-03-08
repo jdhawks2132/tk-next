@@ -2,16 +2,6 @@ import type { EventItem } from '@/types/event';
 
 export const events: EventItem[] = [
 	{
-		id: 1,
-		title: 'Uniform Night',
-		info: ['Skyline Jersey', 'Sign In', 'Come Early'],
-		location: 'The Hidden Door',
-		googleMapsLink: 'https://maps.app.goo.gl/2DUSbghc6M5Rpenp7',
-		infoLink: 'https://www.dallaspssa.org/datesofplay2026',
-		date: '2/21/2026',
-		time: '4:00 PM - 6:00 PM',
-	},
-	{
 		id: 2,
 		title: 'Pegasus Games',
 		info: ['Wear your Jersey', 'Sign In'],
