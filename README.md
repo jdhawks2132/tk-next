@@ -14,7 +14,7 @@ A modern website for the **Dallas Thunder Kitties** softball team, built with:
 
 ### Prerequisites
 
-- Node.js **23.x** (required by Vercel + Next.js)
+- Node.js **24.x LTS**
 - [pnpm](https://pnpm.io/) package manager (recommended, lockfile checked in)
 
 ### Install dependencies

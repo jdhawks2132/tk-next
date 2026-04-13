@@ -2,6 +2,10 @@
   "name": "tk-next",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "pnpm@9.12.3",
+  "engines": {
+    "node": ">=24 <25"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -14,10 +18,10 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "@types/node": "^20",
+    "@types/node": "^24.12.2",
     "@types/react": "^19",
     "@types/react-dom": "^19",
-    "baseline-browser-mapping": "^2.9.19",
+    "baseline-browser-mapping": "^2.10.18",
     "daisyui": "^5.0.54",
     "tailwindcss": "^4",
     "typescript": "^5"
